@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StyleSheet
 import CoreData
 
 @UIApplicationMain
@@ -16,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        try! RootStyle.autoapply(style: appStyle(palette: DefaultPalette()))
         return true
     }
 
